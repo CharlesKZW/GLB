@@ -1,3 +1,4 @@
-numpy==1.21.5
-numba==0.55.1
-pandas==1.4.2 
+numpy == 1.21.5
+numba == 0.55.1
+pandas == 1.4.2 
+xlrd-2.0.1 == 2.0.1

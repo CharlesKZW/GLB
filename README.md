@@ -6,7 +6,7 @@ Generalizable Lower Bounding (GLB) is a framework for developing tight and effic
 
 <figure>
 <img src=selected_speedup.png>
-<figcaption align = "center"><b>Comparison of GLB variants against existing LBs on speedup over 128 UCR datasets. Blue circles above the diagonal indicate datasets over which GLB wins.</b></figcaption>
+<figcaption align = "center"><b>Comparison of GLB variants against existing LBs on speedup over 128 UCR datasets. Blue dots above the diagonal indicate datasets over which GLB wins.</b></figcaption>
 </figure>
 
 

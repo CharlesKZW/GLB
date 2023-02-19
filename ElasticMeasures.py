@@ -3,7 +3,6 @@ import numpy as np
 from numba import jit
 import math
 
-from sklearn.metrics.pairwise import paired_distances
 
 def dev(X):
     lenx = X.shape[1]
