@@ -1,25 +1,25 @@
-# GLB: A Generalized Lower Bound for Accelerating Similarity Search Under Elastic Time-Series Distance Measures
+# Accelerating Similarity Search for Elastic Measures: A Study and New Generalization of Lower Bounding Distances
 
-Generalizable Lower Bounding (GLB) is a framework for developing tight and efficient Lower Bounds (LB) for elastic measures in time series analysis. GLB variants outperform state-of-the-art LBs for all elastic measures.
-
+Generalizable Lower Bounding (GLB) is a framework for developing tight and efficient Lower Bounds (LB) for elastic measures in time series similarity search. GLB variants outperform state-of-the-art LBs for all elastic measures.
 
 
 <figure>
-<img src=selected_speedup.png>
-<figcaption align = "center"><b>Comparison of GLB variants against existing LBs on speedup over 128 UCR datasets. Blue dots above the diagonal indicate datasets over which GLB wins.</b></figcaption>
+<img src=comparison.png>
+<figcaption align = "center"><b>Comparison of GLB against existing LBs on pruning power speedup over 128 UCR datasets. Blue dots above the diagonal indicate datasets where GLB wins.</b></figcaption>
 </figure>
 
 
 
-This package includes implementation of GLB variants as well as state-of-the-art lower bounds used as baselines to showcase the performance of GLB. The primary purposes of this package is to (1) open-source the code for experiments in the GLB paper to facilitate replication of results and (2) provide our impelementation of existing LBs and GLB to facilitate  further research and application in the community. 
+This package includes implementation of GLB variants as well as state-of-the-art lower bounds used as baselines to showcase the performance of GLB. The primary purposes of this package is to
+- open-source the code for experiments in our paper to facilitate replication of results
+-  provide our impelementation of existing LBs and GLB to facilitate  further research and application in the community. 
 
 
 # Publication
-"GLB: A Generalized Lower Bound for Accelerating Similarity Search Under Elastic Time-Series Distance Measures"
+"Accelerating Similarity Search for Elastic Measures: A Study and New Generalization of Lower Bounding Distances", *Proceedings of the VLDB Endowment (PVLDB 2023) Journal, Volume 16, pages 2019‑2032*
 
-John Paparrizos, Kaize Wu, Aaron Elmore, Christos Faloutsos, and Michael J. Franklin
+John Paparrizos*, Charlie Kaize Wu*, Aaron Elmore, Christos Faloutsos, and Michael J. Franklin
 
-under submission/review
 
 # Dataset
 Our experiments are performed on 128 datasets from the [UCR archive](https://www.cs.ucr.edu/~eamonn/time_series_data/), which are included in this package (`UCR2018-New`). The UCR archive includes datasets from various domains and is the largest public collection of labeled time series datasets. Datasets are normalized and split into training and test sets. For datasets with varying lengths and missing values, we resort to [pre-processed versions](https://github.com/johnpaparrizos/UCRArchiveFixes) which used standardized
@@ -34,9 +34,9 @@ Results of three sections can all be obtained by running `Exp.py` script with di
 ```bash
 python Exp.py all full
 ```
-To run an selected LB on a selected number of datasets, for example $LB\_Keogh$ on 20 to 40 datasets, use the following command:
+To run an selected LB on a selected number of datasets, for example $LB\_Keogh$ on the first 40 datasets only, use the following command:
 ```bash
-python Exp.py LB_Keogh 20 40
+python Exp.py LB_Keogh 40
 ```
 
 See next section for a comprehensive list of LBs implemented and evaluated. 

@@ -6,9 +6,6 @@ import sys
 
 from ExpLB import Bounded1NN
 
-
-
-
 # read datasets
 
 dataset_names_df = pd.read_excel('UCR_data_summary.xlsx', usecols=(2, 6))
